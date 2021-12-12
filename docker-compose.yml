@@ -1,0 +1,15 @@
+version: '3'
+services:
+  prometheus:
+    build: 
+      context: .
+      dockerfile: prometheus.Dockerfile
+    ports:
+      - "9090:9090"
+
+  grafana:
+    build: 
+      context: .
+      dockerfile: grafana.Dockerfile
+    ports:
+      - "3000:3000"
